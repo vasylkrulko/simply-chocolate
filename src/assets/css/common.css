@@ -19,6 +19,7 @@
   padding: 11px 0;
   font-weight: 500;
   align-items: center;
+  transition: 300ms ease-in-out;
 }
 
 .menu-link:hover,
