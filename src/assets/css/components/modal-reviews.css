@@ -1,13 +1,3 @@
-
-
-
-
-
-
-
-
-
-
 .review-modal-overlay {
   position: fixed;
   top: 0;
@@ -33,9 +23,6 @@
   opacity: 1;
   visibility: visible;
 }
-
-
-
 
 .review-modal {
   position: relative;
@@ -97,6 +84,21 @@
   transition: border-color 250ms ease;
 }
 
+.review-input-ico {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24px;
+}
+
+.review-input-ico:user-invalid {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24px;
+  opacity: 1;
+}
+
 .review-modal-input:focus,
 .review-textarea-input:focus {
   outline: none;
@@ -107,11 +109,28 @@
   color: #fd9222;
 }
 
-.review-input-ico {
+.review-modal-input:user-invalid + .review-input-ico {
+  color: red;
+}
+
+.review-input-ico-error {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 24px;
+  right: 50px;
+  opacity: 0;
+  visibility: visible;
+}
+
+.review-modal-input:user-invalid ~ .review-input-ico-error {
+  color: red;
+  opacity: 1;
+}
+
+/* Form Validation */
+
+.review-modal-input:user-invalid {
+  border-color: red;
 }
 
 .review-textarea-input {
@@ -123,6 +142,10 @@
   transition: border-color 250ms ease;
   outline: transparent;
   resize: none;
+}
+
+.review-textarea-input:user-invalid {
+  border-color: red;
 }
 
 .review-modal-box {
