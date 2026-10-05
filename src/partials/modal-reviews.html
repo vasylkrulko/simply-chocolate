@@ -21,9 +21,15 @@
             id="name-review"
             class="review-modal-input"
             required
+            pattern="\p{Lu}\p{L}+(?:[ \-]\p{Lu}\p{L}+)*"
+            placeholder="Jacob Mercer"
           />
+
           <svg class="review-input-ico" width="22" height="22">
             <use href="/icons/icons.svg#user"></use>
+          </svg>
+          <svg class="review-input-ico-error" width="22" height="22">
+            <use href="/icons/icons.svg#error"></use>
           </svg>
         </div>
       </div>
@@ -37,9 +43,15 @@
             id="email-review"
             class="review-modal-input"
             required
+            placeholder="example@email.com"
           />
+
           <svg class="review-input-ico" width="22" height="22">
             <use href="/icons/icons.svg#email"></use>
+          </svg>
+
+          <svg class="review-input-ico-error" width="22" height="22">
+            <use href="/icons/icons.svg#error"></use>
           </svg>
         </div>
       </div>
@@ -55,9 +67,14 @@
             id="tel-review"
             class="review-modal-input"
             required
+            pattern="\+?[0-9 \(\)\-]{7,20}"
+            placeholder="+49 176 12345678"
           />
           <svg class="review-input-ico" width="22" height="22">
             <use href="/icons/icons.svg#phone"></use>
+          </svg>
+          <svg class="review-input-ico-error" width="22" height="22">
+            <use href="/icons/icons.svg#error"></use>
           </svg>
         </div>
       </div>
