@@ -11,8 +11,10 @@
   width: 100%;
   height: 100%;
 
-  opacity: 0;
-  visibility: hidden;
+  visibility: hidden; /* overlay не видно */
+  opacity: 0; /*прозорий */
+  pointer-events: none; /* миша не може взаємодіяти з ним */
+
   background-color: rgba(0, 0, 0, 0.5);
   transition:
     opacity 300ms ease-out,
@@ -20,8 +22,9 @@
 }
 
 .review-modal-overlay.is-open {
-  opacity: 1;
-  visibility: visible;
+  visibility: visible; /* overlay стає видимим */
+  opacity: 1; /* стає непрозорим */
+  pointer-events: auto; /* миша взаємодіє з overlay і не проходить крізь нього до елементів сторінки під ним.*/
 }
 
 .review-modal {
