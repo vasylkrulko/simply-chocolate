@@ -1,0 +1,124 @@
+<div class="review-modal-overlay">
+  <div class="review-modal">
+    <button class="review-btn-close" type="button" aria-label="Close modal">
+      <svg class="review-ico-close" width="24" height="24">
+        <use href="/icons/icons.svg#close"></use>
+      </svg>
+    </button>
+
+    <h2 class="review-modal-title">
+      LEAVE A REVIEW ABOUT
+      <span class="title-accent">OUR CHOCOLATE</span>
+    </h2>
+
+    <form class="review-modal-form" name="review_form">
+      <div class="review-modal-field">
+        <label class="review-modal-lablel" for="name-review">Name *</label>
+        <div class="review-input-wrapper">
+          <input
+            type="text"
+            name="name"
+            id="name-review"
+            class="review-modal-input"
+            required
+            pattern="\p{Lu}\p{L}+(?:[ \-]\p{Lu}\p{L}+)*"
+            placeholder="Jacob Mercer"
+          />
+
+          <svg class="review-input-ico" width="22" height="22">
+            <use href="/icons/icons.svg#user"></use>
+          </svg>
+          <svg class="review-input-ico-error" width="22" height="22">
+            <use href="/icons/icons.svg#error"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="review-modal-field">
+        <label class="review-modal-lablel" for="email-review">E-mail *</label>
+        <div class="review-input-wrapper">
+          <input
+            type="email"
+            name="e-mail"
+            id="email-review"
+            class="review-modal-input"
+            required
+            placeholder="example@email.com"
+          />
+
+          <svg class="review-input-ico" width="22" height="22">
+            <use href="/icons/icons.svg#email"></use>
+          </svg>
+
+          <svg class="review-input-ico-error" width="22" height="22">
+            <use href="/icons/icons.svg#error"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="review-modal-field">
+        <label class="review-modal-lablel" for="tel-review"
+          >Phone number *</label
+        >
+        <div class="review-input-wrapper">
+          <input
+            type="tel"
+            name="phone"
+            id="tel-review"
+            class="review-modal-input"
+            required
+            pattern="\+?[0-9 \(\)\-]{7,20}"
+            placeholder="+49 176 12345678"
+          />
+          <svg class="review-input-ico" width="22" height="22">
+            <use href="/icons/icons.svg#phone"></use>
+          </svg>
+          <svg class="review-input-ico-error" width="22" height="22">
+            <use href="/icons/icons.svg#error"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="review-modal-field">
+        <label class="review-modal-lablel" for="user_comment">Comment *</label>
+        <textarea
+          name="user_comment"
+          id="user_comment"
+          placeholder="Enter text"
+          class="review-textarea-input"
+          required
+        ></textarea>
+      </div>
+
+      <div class="review-modal-checkbox">
+        <input
+          class="review-input-checkbox visually-hidden"
+          type="checkbox"
+          id="review_user_policy"
+          name="review_user_policy"
+          required
+        />
+
+        <label class="review-modal-policy" for="review_user_policy">
+          <span class="review-modal-box">
+            <svg class="review-ico-check" width="10" height="10">
+              <use href="/icons/icons.svg#check"></use>
+            </svg>
+          </span>
+          <span class="review-modal-text">
+            I accept the terms and conditions of the
+            <a
+              href="#"
+              class="review-modal-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Privacy Policy</a
+            >
+          </span>
+        </label>
+      </div>
+
+      <button class="btn btn-modal-review" type="submit">Send</button>
+    </form>
+  </div>
+</div>

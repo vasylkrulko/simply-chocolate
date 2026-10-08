@@ -13,16 +13,37 @@
   gap: 88px;
 }
 .benefits-item {
+  position: relative;
   width: 308px;
 }
-.benefits-icon {
+
+.benefits-item:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -44px;
+  transform: translateY(-50%);
+  display: block;
+  content: '';
+  width: 1px;
+  height: 124px;
+  background-color: #fff;
+}
+
+.benefits-wrapper-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 62px;
   height: 62px;
   padding: 15px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
+}
+
+.benefits-icon {
   fill: #fd9222;
 }
+
 .benefits-subtitle {
   margin-top: 22px;
   color: #fff;

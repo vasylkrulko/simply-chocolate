@@ -26,6 +26,10 @@
   gap: 90px;
 }
 
+.footer-social-icon {
+  transition: 300ms ease-in-out;
+}
+
 .footer-text {
   color: #fff;
   font-weight: 600;

@@ -1,0 +1,210 @@
+.review-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  visibility: hidden; /* overlay не видно */
+  opacity: 0; /*прозорий */
+  pointer-events: none; /* миша не може взаємодіяти з ним */
+
+  background-color: rgba(0, 0, 0, 0.5);
+  transition:
+    opacity 300ms ease-out,
+    visibility 300ms ease-out;
+}
+
+.review-modal-overlay.is-open {
+  visibility: visible; /* overlay стає видимим */
+  opacity: 1; /* стає непрозорим */
+  pointer-events: auto; /* миша взаємодіє з overlay і не проходить крізь нього до елементів сторінки під ним.*/
+}
+
+.review-modal {
+  position: relative;
+  width: 100%;
+  max-width: 518px;
+  padding: 40px;
+
+  background-color: #fafafa;
+  border-radius: 15px;
+}
+
+.review-btn-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transition: 300ms ease-in-out;
+}
+
+.review-btn-close:hover,
+.review-btn-close:focus {
+  color: #fd9222;
+}
+
+.review-modal-title {
+  max-width: 300px;
+  margin-bottom: 40px;
+
+  text-align: start;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.72px;
+  text-transform: uppercase;
+}
+
+.review-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.review-modal-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-input-wrapper {
+  position: relative;
+  margin-top: 8px;
+}
+
+.review-modal-input {
+  width: 100%;
+  padding: 22px 62px;
+  border-radius: 12px;
+  outline: transparent;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  transition: border-color 250ms ease;
+}
+
+.review-input-ico {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24px;
+}
+
+.review-input-ico:user-invalid {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 24px;
+  opacity: 1;
+}
+
+.review-modal-input:focus,
+.review-textarea-input:focus {
+  outline: none;
+  border-color: #fd9222;
+}
+
+.review-modal-input:focus + .review-input-ico {
+  color: #fd9222;
+}
+
+.review-modal-input:user-invalid + .review-input-ico {
+  color: red;
+}
+
+.review-input-ico-error {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50px;
+  opacity: 0;
+  visibility: visible;
+}
+
+.review-modal-input:user-invalid ~ .review-input-ico-error {
+  color: red;
+  opacity: 1;
+}
+
+/* Form Validation */
+
+.review-modal-input:user-invalid {
+  border-color: red;
+}
+
+.review-textarea-input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  transition: border-color 250ms ease;
+  outline: transparent;
+  resize: none;
+}
+
+.review-textarea-input:user-invalid {
+  border-color: red;
+}
+
+.review-modal-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #7c7c7c;
+  border-radius: 5px;
+  transition: 300ms ease-in-out;
+  transition-property: border-color, background-color;
+}
+
+.review-input-checkbox:checked + .review-modal-policy > .review-modal-box {
+  border-color: transparent;
+  background-color: #fd9222;
+}
+.review-input-checkbox:focus-visible + .review-modal-policy .review-modal-box {
+  border-color: #fd9222;
+}
+.review-input-checkbox:checked
+  + .review-modal-policy
+  > .review-modal-box
+  .review-ico-check {
+  opacity: 1;
+  transition: 300ms ease-in-out;
+  transition-property: opacity;
+}
+
+.review-ico-check {
+  color: #fafafa;
+  opacity: 0;
+  transition: 300ms ease-in-out;
+  transition-property: opacity;
+}
+
+.review-modal-policy {
+  display: flex;
+  gap: 12px;
+}
+
+.review-modal-link {
+  color: #fd9222;
+}
+
+.btn-modal-review {
+  width: fit-content;
+  margin-top: 22px;
+  color: #fafafa;
+  background-color: #fd9222;
+}
+
+.btn-modal-review:hover,
+.btn-modal-review:focus {
+  color: #fd9222;
+  background-color: #fcf1e0;
+}
