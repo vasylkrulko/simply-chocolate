@@ -1,6 +1,11 @@
-.section {
-  padding: 60px 0;
+.hide {
+  display: none !important;
 }
+
+.section {
+  padding: 61px 0;
+}
+
 .container {
   max-width: 1200px;
   padding: 0 32px;
