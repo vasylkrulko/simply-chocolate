@@ -11,9 +11,12 @@ const sectionLinks = [...menuLinks]
       link,
       section,
     };
-  });
+  })
+  .filter(({ section }) => section !== null);
 
 function setActiveLink(activeLink) {
+  if (!activeLink) return;
+
   menuLinks.forEach((link) => {
     link.classList.remove('is-active');
   });
@@ -22,8 +25,11 @@ function setActiveLink(activeLink) {
 }
 
 function updateActiveLink() {
-  const headerHeight = document.querySelector('header').offsetHeight;
+  const header = document.querySelector('.header');
 
+  if (!header) return;
+
+  const headerHeight = header.offsetHeight;
   let activeLink = homeLink;
 
   sectionLinks.forEach(({ link, section }) => {

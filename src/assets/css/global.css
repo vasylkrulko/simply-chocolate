@@ -11,3 +11,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 35px;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
