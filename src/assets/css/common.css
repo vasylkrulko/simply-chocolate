@@ -1,15 +1,12 @@
-.hide {
-  display: none !important;
-}
-
 .section {
-  padding: 61px 0;
+  padding: 60px 0;
 }
 
 .container {
-  max-width: 1200px;
-  padding: 0 32px;
+  min-width: 320px;
+  max-width: 375px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .menu-list {
@@ -35,6 +32,7 @@
 /* Social Icons */
 .social {
   display: flex;
+  flex-wrap: wrap;
   gap: 14px;
 }
 
@@ -51,7 +49,7 @@
   height: 100%;
   border-radius: 10px;
 
-  border: 1px solid rgb(150, 144, 144);
+  border: 1px solid rgb(99, 94, 94);
 }
 
 .social-icon {

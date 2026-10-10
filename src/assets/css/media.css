@@ -1,36 +1,89 @@
-@media (max-width: 1280px) {
+@media (min-width: 768px) {
   .container {
     max-width: 768px;
     margin: 0 auto;
     padding: 0 32px;
   }
+
   .header-wrapper {
-    display: flex;
+    max-width: 768px;
     padding: 20px 32px;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
   }
 
   .header-logo {
     font-size: 14px;
   }
-  .header-logo-icon {
-    width: 15px;
-    height: 15px;
+
+  .header-menu-link {
+    position: relative;
+  }
+
+  .header-menu-link.is-active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #fd9222;
+  }
+
+  .header-menu-link:hover,
+  .header-menu-link:focus-visible,
+  .header-menu-link.is-active {
+    color: #fd9222;
+  }
+
+  .social-link:hover .social-icon,
+  .social-link:active .social-icon {
     fill: #fd9222;
+  }
+
+  .header .nav {
+    display: block;
+  }
+
+  .header .social {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .mobile-menu-burger {
+    display: none;
+  }
+  .mobile-menu {
+    display: none;
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 1168px) {
   .container {
-    width: 100%;
+    max-width: 1168px;
     margin: 0 auto;
     padding: 0 16px;
   }
-  .nav,
-  .social {
+  .mobile-menu-btn {
+    display: none;
+  }
+  .header .social {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .header-wrapper {
+    max-width: 1168px;
+    padding: 20px 16px;
+  }
+
+  .header-logo {
+    font-size: 18px;
+  }
+
+  .header-logo-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .mobile-menu-burger {
     display: none;
   }
 }
