@@ -1,10 +1,16 @@
+.section-title {
+  max-width: 412px;
+  font-size: 22px;
+  line-height: 24px;
+}
+
 .ingredients-list {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   gap: 32px;
-  max-width: 1136px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 32px;
 }
 
 .ingredients-item {
@@ -14,9 +20,27 @@
   gap: 32px;
   padding: 28px 24px;
   align-items: flex-start;
-  width: calc((100% - 96px) / 4);
-  min-width: 260px;
+  width: 100%;
   border-radius: 15px;
+}
+
+.ingredients-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  top: 14px;
+  right: 14px;
+  width: 22px;
+  height: 22px;
+  color: #fff;
+}
+
+.ingredients-img {
+  align-self: center;
+  height: auto;
 }
 
 /* background */
