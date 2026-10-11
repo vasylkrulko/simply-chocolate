@@ -1,4 +1,8 @@
 @media (min-width: 768px) {
+  .section {
+    padding: 50px 0;
+  }
+
   .container {
     max-width: 768px;
     margin: 0 auto;
@@ -81,12 +85,11 @@
     line-height: 34px;
     letter-spacing: -0.84px;
   }
-  .hero-buy {
-    padding: 14px 40px;
-  }
+  .hero-buy,
   .hero-made {
     padding: 14px 40px;
   }
+
   .hero-actions {
     width: 100%;
     flex-direction: row;
@@ -118,22 +121,30 @@
   .benefits-item {
     max-width: 308px;
   }
+
+  /* Ingredients */
+  .ingredients-list {
+    flex-direction: row;
+  }
+
+  .ingredients-item {
+    width: calc((100% - 32px) / 2);
+  }
 }
 
 @media (min-width: 1168px) {
+  .section {
+    padding: 60px 0;
+  }
   .container {
     max-width: 1168px;
-    margin: 0 auto;
-    padding: 0 32px;
   }
+
   /* Header */
   .mobile-menu-btn {
     display: none;
   }
-  .header .social {
-    display: flex;
-    flex-wrap: wrap;
-  }
+
   .header-wrapper {
     max-width: 1168px;
     padding: 20px 16px;
@@ -159,5 +170,15 @@
       url(/assets/img/hero-desktop-1136x600.webp) 1x,
       url(/assets/img/hero-desktop-2272x1200@2x.webp) 2x
     );
+  }
+
+  /* Ingredients */
+  .ingredients-list {
+    justify-content: flex-start;
+  }
+
+  .ingredients-item {
+    max-width: 260px;
+    width: calc((100% - 96px) / 4);
   }
 }
