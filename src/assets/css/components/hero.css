@@ -3,15 +3,18 @@
 }
 .hero {
   height: 626px;
-  background-image: url(/assets/img/hero-desktop-1136x600.webp);
+  background-color: #111;
+  background-image: url(/assets/img/hero-mobile-335x626.webp);
+  background-image: image-set(
+    url(/assets/img/hero-mobile-335x626.webp) 1x,
+    url(/assets/img/hero-mobile-670x1252@2x.webp) 2x
+  );
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-color: #111;
   border-radius: 24px;
   overflow: hidden;
   width: 100%;
-  padding: 0 20px;
 }
 
 .hero-content-wrapper {

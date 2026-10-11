@@ -66,7 +66,13 @@
   .hero {
     height: 704px;
   }
-
+  .hero {
+    background-image: url(/assets/img/hero-tablet-704x820.webp);
+    background-image: image-set(
+      url(/assets/img/hero-tablet-704x820.webp) 1x,
+      url(/assets/img/hero-tablet-1408x1640@2x.webp) 2x
+    );
+  }
   .hero-title {
     max-width: 484px;
     font-size: 28px;
@@ -124,5 +130,12 @@
   }
   .hero {
     height: 600px;
+  }
+  .hero {
+    background-image: url(/assets/img/hero-desktop-1136x600.webp);
+    background-image: image-set(
+      url(/assets/img/hero-desktop-1136x600.webp) 1x,
+      url(/assets/img/hero-desktop-2272x1200@2x.webp) 2x
+    );
   }
 }
