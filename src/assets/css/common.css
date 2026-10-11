@@ -1,10 +1,13 @@
+.hide {
+  display: none;
+}
+
 .section {
-  padding: 60px 0;
+  padding: 60px 20px;
 }
 
 .container {
-  min-width: 320px;
-  max-width: 375px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -79,7 +82,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 14px 40px;
+  padding: 12px 28px;
   border-radius: 100px;
   transition: 300ms ease-in-out;
 }
