@@ -15,7 +15,6 @@
 }
 
 .benefits-item {
-  /* max-width: 308px; */
   max-width: 100%;
 }
 
@@ -35,7 +34,7 @@
 }
 
 .benefits-subtitle {
-  margin-top: 22px;
+  margin-top: 23px;
   color: #fff;
   font-size: 18px;
   font-style: normal;

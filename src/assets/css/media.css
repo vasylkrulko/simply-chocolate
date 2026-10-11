@@ -4,6 +4,7 @@
     margin: 0 auto;
     padding: 0 32px;
   }
+
   /* Header */
   .header-wrapper {
     max-width: 768px;
@@ -109,10 +110,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: start;
     justify-content: left;
     gap: 44px 88px;
   }
+
   .benefits-item {
     max-width: 308px;
   }
