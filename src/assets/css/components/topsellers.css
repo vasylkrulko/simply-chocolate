@@ -1,15 +1,15 @@
 .topsellers-list {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   gap: 16px;
-  margin-top: 50px;
+  margin-top: 32px;
 }
 .topsellers-item {
-  min-width: 368px;
+  width: 100%;
   border-radius: 16px;
   border: 1px solid #e5e5e5;
   overflow: hidden;
-  width: calc((100% - 16px * 2) / 3);
 }
 
 .topsellers-subtitle {
@@ -21,7 +21,6 @@
   text-transform: uppercase;
 }
 
-/* Overlay */
 .topsellers-img-wrapper {
   position: relative;
   overflow: hidden;
