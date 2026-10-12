@@ -2,15 +2,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px 18px;
-  margin-top: 50px;
+  margin-top: 32px;
 }
 .ourproducts-item {
-  width: calc((100% - 18px * 3) / 4);
-  min-width: 270px;
-  padding: 32px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding: 32px 20px;
+
   border-radius: 16px;
   border:
     1px solid,
