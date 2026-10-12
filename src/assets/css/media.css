@@ -175,6 +175,22 @@
       rgba(17, 17, 17, 0.1);
     background-color: #fff;
   }
+
+  /* Top Sellers */
+  .topsellers-list {
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    margin-top: 50px;
+  }
+
+  .topsellers-item {
+    width: calc((100% - 32px) / 2);
+  }
+
+  .topsellers-hide {
+    display: none;
+  }
 }
 
 @media (min-width: 1168px) {
@@ -256,5 +272,25 @@
 
   .ourproducts-item {
     width: calc((100% - 18px * 3) / 4);
+  }
+
+  /* Top Sellers */
+  .topsellers-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 50px;
+  }
+  .topsellers-item {
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+    width: calc((100% - 16px * 2) / 3);
+  }
+
+  .topsellers-hide {
+    display: block;
   }
 }
