@@ -1,16 +1,16 @@
 .reviews {
-  padding: 60px 0 120px 0;
+  padding: 40px 0 80px 0;
 }
 .reviews-list {
   display: flex;
-  gap: 28px;
+  flex-direction: column;
+  gap: 60px;
   flex-wrap: wrap;
-  padding: 90px 0;
+  padding: 70px 0 50px 0;
 }
 
 .reviews-items {
-  width: calc((100% - 28px * 2) / 3);
-  min-width: 360px;
+  width: 100%;
   position: relative;
   padding: 56px 24px 24px;
   border: 1px solid rgba(17, 17, 17, 0.1);
@@ -42,6 +42,7 @@
 }
 
 .reviews-link {
+  margin-top: 50px;
   margin: 0 auto;
   width: fit-content;
   border: 1px solid #fd9222;
