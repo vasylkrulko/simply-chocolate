@@ -1,11 +1,12 @@
 .process-wrapper {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
-  padding-top: 50px;
+  padding-top: 32px;
 }
 .process-img-wrapper {
-  flex: 1 1 600px;
+  max-width: 100%;
   overflow: hidden;
   border-radius: 16px;
 }
@@ -16,12 +17,12 @@
   object-fit: cover;
 }
 .process-content {
-  flex: 1 1 516px;
-
+  max-width: 100%;
   padding: 32px;
   background: #fff;
   border-radius: 16px;
 }
+
 .process-subtitle {
   font-size: 18px;
   font-weight: 600;
@@ -29,13 +30,16 @@
   max-width: 350px;
 }
 .process-list {
-  margin-top: 28px;
+  margin-top: 20px;
 }
 
 .process-item {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   position: relative;
   padding-left: 20px;
+}
+.process-item:last-child {
+  margin-bottom: 0;
 }
 
 .process-item::before {
@@ -49,8 +53,4 @@
   border-radius: 50%;
   border: 1px solid #7d7a7a;
   background-color: #4c4c4c;
-}
-
-.process-item:last-child {
-  margin-bottom: 0;
 }
